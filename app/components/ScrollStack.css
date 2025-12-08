@@ -1,0 +1,12 @@
+.scroll-stack-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.scroll-stack-card {
+    position: sticky;
+    width: 100%;
+    box-sizing: border-box;
+}

@@ -71,7 +71,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     Object.entries(uiState.theme.colors).forEach(([key, value]) => {
       root.style.setProperty(`--${key}`, value);
     });
-    
+
     // Apply Font (simplified for demo, usually involves loading fonts or setting classes)
     // Here we just map to CSS vars or classes if needed, but we'll rely on the tailwind classes in components
   }, [uiState.theme]);

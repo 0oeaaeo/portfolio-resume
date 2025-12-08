@@ -30,17 +30,16 @@ export default function Home() {
       <PixelBlast />
       <div className="relative z-10">
         <TerminalIntro onComplete={() => setShowContent(true)} />
-        
+
         {showContent && (
-          <div className={`animate-in fade-in duration-1000 slide-in-from-bottom-4 flex flex-col ${
-            uiState.layout.spacing === "compact" ? "gap-0" : 
+          <div className={`animate-in fade-in duration-1000 slide-in-from-bottom-4 flex flex-col ${uiState.layout.spacing === "compact" ? "gap-0" :
             uiState.layout.spacing === "spacious" ? "gap-32" : "gap-0"
-          }`}>
+            }`}>
             <AnimatePresence mode="popLayout">
               {uiState.layout.order.map((componentId) => {
                 const Component = COMPONENT_MAP[componentId];
                 if (!Component) return null;
-                
+
                 return (
                   <motion.div
                     key={componentId}
@@ -55,7 +54,7 @@ export default function Home() {
                 );
               })}
             </AnimatePresence>
-            
+
             <footer className="py-8 text-center text-gray-600 text-sm font-mono">
               © {new Date().getFullYear()} Eric Dennis. Built with Next.js + Tailwind.
             </footer>
