@@ -16,6 +16,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Eric Dennis | Founder Stack & AI Architect",
   description: "Portfolio of Eric Dennis - Bridging Linux Mastery and Next-Gen AI",
+  openGraph: {
+    title: "Eric Dennis | Founder Stack & AI Architect",
+    description: "Portfolio of Eric Dennis - Bridging Linux Mastery and Next-Gen AI",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eric Dennis | Founder Stack & AI Architect",
+    description: "Portfolio of Eric Dennis - Bridging Linux Mastery and Next-Gen AI",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
